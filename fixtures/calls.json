@@ -1,0 +1,335 @@
+{
+  "calls": [
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "my name is amelia hart",
+        "phone_text": "zero seven nine five zero one five five two four zero",
+        "service_text": "I would like to book a cleaning please",
+        "when_text": "tuesday at ten please"
+      },
+      "conditions": {
+        "channel": "wideband",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-01",
+      "label": "clean wideband booking",
+      "trap": null,
+      "truth": {
+        "day": "tuesday",
+        "name": "amelia hart",
+        "phone": "07950155240",
+        "service": "cleaning",
+        "time": "10:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "tom ellis",
+        "phone_text": "zero seven nine eight one five five zero nine three two",
+        "service_text": "I need a checkup",
+        "when_text": "thursday at half ten if you have it"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": null,
+        "style": "slow"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-02",
+      "label": "slow speaker on telephony",
+      "trap": null,
+      "truth": {
+        "day": "thursday",
+        "name": "tom ellis",
+        "phone": "07981550932",
+        "service": "checkup",
+        "time": "10:30"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "priya shah",
+        "phone_text": "zero seven four one two nine eight five three six one",
+        "service_text": "whitening please",
+        "when_text": "friday at three"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": 8,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-03",
+      "label": "noisy telephony booking",
+      "trap": null,
+      "truth": {
+        "day": "friday",
+        "name": "priya shah",
+        "phone": "07412985361",
+        "service": "whitening",
+        "time": "15:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "daniel okafor",
+        "phone_text": "zero seven nine five zero fifteen five two eight four",
+        "service_text": "a cleaning please",
+        "when_text": "monday at nine"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-04",
+      "label": "fifteen chunk in the phone number",
+      "trap": null,
+      "truth": {
+        "day": "monday",
+        "name": "daniel okafor",
+        "phone": "07950155284",
+        "service": "cleaning",
+        "time": "09:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "grace mullen",
+        "phone_text": "zero seven seven seven one two three four five six seven",
+        "service_text": "a checkup please",
+        "when_text": "wednesday at half nine"
+      },
+      "conditions": {
+        "channel": "wideband",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "declines",
+      "expected_outcome": "consent_refused",
+      "id": "call-05",
+      "label": "declines recording consent",
+      "trap": null,
+      "truth": {
+        "day": "wednesday",
+        "name": "grace mullen",
+        "phone": "07771234567",
+        "service": "checkup",
+        "time": "09:30"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": [
+          "n",
+          "i",
+          "a",
+          "m",
+          "h"
+        ],
+        "name_text": "my name is niamh byrne",
+        "phone_text": "zero seven nine three eight two six four one nine five",
+        "service_text": "could I book a checkup",
+        "when_text": "saturday at eleven"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-06",
+      "label": "name that has to be spelled",
+      "trap": null,
+      "truth": {
+        "day": "saturday",
+        "name": "niamh byrne",
+        "phone": "07938264195",
+        "service": "checkup",
+        "time": "11:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "peter lang",
+        "phone_text": "zero seven five five nine zero eight two four six three",
+        "service_text": "cleaning please",
+        "when_text": "tuesday at ten"
+      },
+      "conditions": {
+        "channel": "wideband",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-07",
+      "label": "tries to pay the deposit by card on the call",
+      "trap": "card",
+      "truth": {
+        "day": "tuesday",
+        "name": "peter lang",
+        "phone": "07559082463",
+        "service": "cleaning",
+        "time": "10:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "sofia marin",
+        "phone_text": "zero seven nine nine four five one seven eight two zero",
+        "service_text": "I need to move my cleaning appointment",
+        "when_text": "friday at two instead"
+      },
+      "conditions": {
+        "channel": "wideband",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "existing_booking": {
+        "day": "tuesday",
+        "service": "cleaning",
+        "time": "11:30"
+      },
+      "expected_outcome": "booked",
+      "id": "call-08",
+      "label": "reschedule an existing booking",
+      "trap": null,
+      "truth": {
+        "day": "friday",
+        "name": "sofia marin",
+        "phone": "07994517820",
+        "service": "cleaning",
+        "time": "14:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "harry webb",
+        "phone_text": "zero seven eight eight two six nine three five one four",
+        "service_text": "I need an emergency appointment my face is swollen",
+        "when_text": "today if possible"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": 12,
+        "style": "rushed"
+      },
+      "consent": "agrees",
+      "expected_outcome": "escalated",
+      "id": "call-09",
+      "label": "emergency symptoms",
+      "trap": null,
+      "truth": {
+        "day": null,
+        "name": "harry webb",
+        "phone": "07882693514",
+        "service": "emergency",
+        "time": null
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": [
+          "w",
+          "r",
+          "i",
+          "g",
+          "h",
+          "t"
+        ],
+        "name_text": "sara wright",
+        "phone_text": "zero seven one two three four five six seven eight nine",
+        "service_text": "a checkup and a polish",
+        "when_text": "wednesday at half nine"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": null,
+        "style": "normal"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-10",
+      "label": "homophone surname",
+      "trap": null,
+      "truth": {
+        "day": "wednesday",
+        "name": "sara wright",
+        "phone": "07123456789",
+        "service": "checkup",
+        "time": "09:30"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "omar farouk",
+        "phone_text": "zero seven nine six five fifteen nine two eight three",
+        "service_text": "checkup please",
+        "when_text": "saturday at eleven"
+      },
+      "conditions": {
+        "channel": "telephony",
+        "snr_db": 5,
+        "style": "slow"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-11",
+      "label": "the hard call: slow, noisy, narrowband, chunked number",
+      "trap": null,
+      "truth": {
+        "day": "saturday",
+        "name": "omar farouk",
+        "phone": "07965159283",
+        "service": "checkup",
+        "time": "11:00"
+      }
+    },
+    {
+      "answers": {
+        "name_spelled": null,
+        "name_text": "lucy chen",
+        "phone_text": "zero seven four four eight one nine zero two six five",
+        "service_text": "whitening please",
+        "when_text": "monday at two"
+      },
+      "conditions": {
+        "channel": "wideband",
+        "snr_db": null,
+        "style": "rushed"
+      },
+      "consent": "agrees",
+      "expected_outcome": "booked",
+      "id": "call-12",
+      "label": "rushed but clean wideband booking",
+      "trap": null,
+      "truth": {
+        "day": "monday",
+        "name": "lucy chen",
+        "phone": "07448190265",
+        "service": "whitening",
+        "time": "14:00"
+      }
+    }
+  ],
+  "description": "Scripted calls for the dialogue lessons and the capstone. Answers are what the caller says; vox/stt.py transcribes them under the call's conditions, so the dialogue manager works from hypotheses, not truth. truth is the grading record. expected_outcome is what a correct system does."
+}
